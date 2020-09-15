@@ -1,0 +1,5 @@
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";
+.demand-body textarea{
+  min-height: 300rpx !important;
+}

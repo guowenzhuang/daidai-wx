@@ -1,0 +1,39 @@
+
+
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="navChange" data-cur="home">
+    <view class='cuIcon-cu-image'>
+      <text class="cuIcon-homefill lg {{pageCur=='home'?'text-yellow':'text-gray'}}"></text>
+      </view>
+    <view class="{{pageCur=='home'?'text-yellow':'text-gray'}}">代代</view>
+  </view>
+  <view class="action" bindtap="navChange" data-cur="search">
+    <view class='cuIcon-cu-image'>
+      <text class="cuIcon-search lg {{pageCur=='search'?'text-yellow':'text-gray'}}"></text>
+      </view>
+    <view class="{{pageCur=='search'?'text-yellow':'text-gray'}}">搜索</view>
+  </view>
+
+  <view class="action add-demand" bindtap="navChange" data-cur="demand">
+    <view class="add-icon-white" style="width:{{addIconWidth+(addIconWhitePadding*2)}}px; padding: {{addIconWhitePadding}}px">
+      <view class='cuIcon-cu-image add-icon bg-yellow'>
+      <view>
+        <icon class="iconfont jushi-icon-add" size="20"></icon>
+      </view>
+    </view>
+    </view>
+    <view class="add-demand-text {{pageCur=='demand'?'text-yellow':'text-gray'}}">发需求</view>
+  </view>
+  <view class="action" bindtap="navChange" data-cur="mark">
+    <view class='cuIcon-cu-image'>
+      <text class="cuIcon-mark lg {{pageCur=='mark'?'text-yellow':'text-gray'}}"></text>
+      </view>
+    <view class="{{pageCur=='mark'?'text-yellow':'text-gray'}}">消息</view>
+  </view>
+  <view class="action" bindtap="navChange" data-cur="people">
+    <view class='cuIcon-cu-image'>
+      <text class="cuIcon-people lg {{pageCur=='people'?'text-yellow':'text-gray'}}"></text>
+      </view>
+    <view class="{{pageCur=='people'?'text-yellow':'text-gray'}}">我的</view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "addDemand": "/pages/addDemand/home/home"
+  }
+}

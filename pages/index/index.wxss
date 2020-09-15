@@ -1,0 +1,21 @@
+.add-demand{
+  bottom: 35rpx;
+}
+.add-icon{
+  border-radius: 50%;
+  padding: 20rpx;
+  margin: 0 !important;
+}
+
+.jushi-icon-add{
+  font-size: 60rpx !important;
+}
+.add-demand-text{
+  margin-top: 20rpx;
+}
+.add-icon-white{
+  background-color: var(--white);
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+

@@ -1,0 +1,39 @@
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+@import "stylesheet.wxss";
+
+
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.jushi-icon-add:before {
+  content: "\e6d4";
+}
+
+.jushi-icon-lvyou-jushizhen:before {
+  content: "\e668";
+}
+
+.jushi-icon-wodebankuai:before {
+  content: "\e6b0";
+}
+
+.jushi-icon-me:before {
+  content: "\e65a";
+}
+
+.jushi-icon-xiaoxi-:before {
+  content: "\e600";
+}
+
+.jushi-icon-home:before {
+  content: "\e6af";
+}
+
+
