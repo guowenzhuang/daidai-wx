@@ -6,6 +6,8 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+    
+
     // 登录
     wx.login({
       success: res => {
@@ -45,8 +47,21 @@ App({
         }
       }
     })
+
+
+    wx.getSystemInfo({
+      success: res => {
+          this.globalData.systemInfo = res
+          this.globalData.windowHeight = res.windowHeight /(res.windowWidth /750)
+          this.globalData.screenHeight = res.screenHeight /(res.screenWidth /750)
+      }
+  })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    systemInfo: null,
+    windowHeight: null, // rpx换算px后的窗口高度
+    screenHeight: null, // rpx换算px后的屏幕高度
+    url:'http://127.0.0.1:8000/api'
   }
 })

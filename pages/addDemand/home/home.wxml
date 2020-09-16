@@ -1,18 +1,17 @@
 <!--pages/addDemand/home/home.wxml-->
-<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+<cu-custom bgColor="bg-yellow" isBack="{{true}}">
   <view slot="backText">返回</view>
   <view slot="content">发布</view>
 </cu-custom>
 
-<scroll-view scroll-y class="scrollPage bg-gradual-blue">
-
+<scroll-view scroll-y class="scrollPag" style="padding-top: 20rpx; height:{{windowHeight}}rpx">
 <view class="margin-lg">
   <form>
     <view class="cu-form-group">
-      <input placeholder="标题"></input>
+      <input placeholder="标题" bindinput="titleInput"></input>
     </view>
     <view class="cu-form-group margin-top demand-body">
-      <textarea maxlength="-1" placeholder="需求"></textarea>
+      <textarea maxlength="-1" placeholder="需求" bindinput="bodyInput"></textarea>
     </view>
 
     <view class="cu-bar bg-white margin-top">
@@ -38,8 +37,8 @@
   </view>
   
     <view class="cu-form-group margin-top">
-      <input placeholder="价格" type="number"></input>
-      <text class="cuIcon-rechargefill text-orange"></text>
+      <input placeholder="价格" bindinput="priceInput" type="number" value="{{price}}"></input>
+      <text   class="cuIcon-rechargefill text-orange"></text>
     </view>
     <view class="cu-form-group">
 		<view class="title">地址选择</view>
@@ -51,9 +50,20 @@
         暂无
       </view>
 		</picker>
+  </view>
+	<view class="cu-form-group margin-top">
+		<textarea maxlength="-1"  bindinput="textareaAInput" placeholder="详细地址"></textarea>
+	</view>
+  <view class="cu-form-group margin-top">
+		<view class="title">选择服务</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{picker[style]}}
+			</view>
+		</picker>
 	</view>
     <view class="cmargin-top  padding flex flex-direction margin-bottom-xl">
-      <button class="cu-btn bg-yellow lg">发布</button>
+      <button class="cu-btn bg-yellow lg" bindtap="saveDemand">发布</button>
     </view>
   </form>
 

@@ -1,5 +1,3 @@
-
-
 <view class="cu-bar tabbar bg-white shadow foot">
   <view class="action" bindtap="navChange" data-cur="home">
     <view class='cuIcon-cu-image'>
